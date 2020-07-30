@@ -15,15 +15,16 @@
     </div>
   </nav>
   <!--END NAVBAR-->
-
+<!--
 <div>
     <table class="table" style="width: 100%;" >
       <thead>
       <tr>
         <th>Toy picture</th>
         <th>Toy name</th>
+        <th>Gender</th>
         <th>Brand</th>
-        <th>Price</th>
+        <th>Price(THB)</th>
         <th>Availabillity</th>
       </tr>
       </thead>
@@ -33,21 +34,26 @@
                 <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
             </th>
             <th>{{product.Toy_name}}</th>
+            <th>{{product.Gender}}</th>
             <th>{{product.Brand}}</th>
-            <th>{{product.Price}}</th>
+            <th>{{product.Price*31.5}}</th>
             <th>{{product.Availability}}</th>
         </tr>
     </tbody>
     </table>  
   </div>
-<div>
+-->
+<div class="container">
+    <p>
+        <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
+    </p>
     <h4><b>{{product.Toy_name}}</b></h4>
-    <p>Brand: {{product.Brand}}</p>
+    <p id="toy_brand">Brand: {{product.Brand}}</p>
     <p>Gender: {{product.Gender}}</p>
     <p>Age: {{product.Age}}</p>
-    <p>Price: {{product.Price}} </p>
-    <p>Shipping Method:</p>
-    <p>In Stock: </p> <i>Yes</i>
+    <p id="toy_price">Price: {{product.Price*31.5}} (THB) </p>
+    <p>Shipping Method: Cash on delivery</p>
+    <p id="toy_stock">Stock: {{product.Availability}} </p>
     <P>Quantity: </P>
     <button ng-click="$location.path('#/product-detail')" type="button" class="btn btn-info">Add to cart</button>
     <br/>
