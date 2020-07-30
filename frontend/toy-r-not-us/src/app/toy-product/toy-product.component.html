@@ -1,9 +1,8 @@
-<p>toy-product works!</p>
 
 <!DOCTYPE html>
 <html>
 <body>
-<h1>Search Toy</h1>
+<h1 style="text-align: center; font-family: courier;">Search Toy</h1>
 
 
 <form action="/action_page.php">
@@ -22,11 +21,12 @@
     <option value="Neutral">Neutral</option>
   </select>
  <br>
- <input type="submit" value="Search">
+ <button type="button">Search</button>
+ 
 </form>
 <p>x toys found</p>
 <div>
-  <table class="table" >
+  <table class="table" style="width: 100%; >
     <thead>
     <tr>
       <th>Toy name</th>
@@ -35,6 +35,14 @@
       <th>Availabillity</th>
     </tr>
     </thead>
+    <tbody *ngIf="products.length > 0">
+      <tr *ngFor="let product of products">
+          <th>{{product.Toy_name}}</th>
+          <th>{{product.Brand}}</th>
+          <th>{{product.Price}}</th>
+          <th>{{product.Availability}}</th>
+      </tr>
+  </tbody>
   </table>  
 </div>
 </body>
