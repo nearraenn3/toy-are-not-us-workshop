@@ -37,7 +37,7 @@
     </thead>
     <tbody *ngIf="products.length > 0">
       <tr *ngFor="let product of products">
-          <th>{{product.Toy_name}}</th>
+          <th [routerLink]="['/detail/'+ product.Toy_name]" (click)="clickDetail(product)">{{product.Toy_name}}</th>
           <th>{{product.Brand}}</th>
           <th>{{product.Price}}</th>
           <th>{{product.Availability}}</th>

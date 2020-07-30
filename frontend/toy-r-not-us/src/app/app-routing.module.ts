@@ -8,7 +8,7 @@ import { from } from 'rxjs';
 //Create component routes path
 const routes: Routes = [
   { path: 'toy-product', component: ToyProductComponent},
-  { path: 'toy-product', component: ProductDetailComponent},
+  { path: 'detail/:product', component: ProductDetailComponent},
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
