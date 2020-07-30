@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "toy-r-not-us"
+    }
+  },
+  "defaultProject": "toy-r-not-us",
+  "cli": {
+    "analytics": "555d0299-a2b7-4006-b7ba-d387df642bd2"
+  }
 }
