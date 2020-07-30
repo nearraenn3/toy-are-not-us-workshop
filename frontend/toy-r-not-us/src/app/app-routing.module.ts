@@ -8,10 +8,12 @@ import { from } from 'rxjs';
 
 //Create component routes path
 const routes: Routes = [
+  { path: '', component: MainComponent}, 
   { path: 'main', component: MainComponent},  //homepage
   { path: 'toy-product', component: ToyProductComponent},
   { path: 'product-detail', component: ProductDetailComponent},
 ];
+    
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
