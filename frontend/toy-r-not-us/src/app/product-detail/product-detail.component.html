@@ -45,7 +45,7 @@
 -->
 <div class="container">
     <p>
-        <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
+        <img style="width: 50%;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
     </p>
     <h4><b>{{product.Toy_name}}</b></h4>
     <p id="toy_brand">Brand: {{product.Brand}}</p>
@@ -55,6 +55,6 @@
     <p>Shipping Method: Cash on delivery</p>
     <p id="toy_stock">Stock: {{product.Availability}} </p>
     <P>Quantity: </P>
-    <button ng-click="$location.path('#/product-detail')" type="button" class="btn btn-info">Add to cart</button>
+    <button id="btn_cart" [routerLink]="['/cart']" ng-click="$location.path('#/product-detail')" type="button" class="btn btn-info">Add to cart</button>
     <br/>
 </div>
