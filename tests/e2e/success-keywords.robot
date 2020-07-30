@@ -1,8 +1,14 @@
 *** Variables ***
 ${URL}    shopping
+${FULLNAME_TEXT}    Numlabyod Reprakan
+${ADDRESS1_TEXT}    124 m.1 Phang Tru, Tha muang
+${ADDRESS2_TEXT}    9 m.1 Phang Tru, Tha muang
+${PROVINCE_TEXT}    Kanchanaburi
+${POSTCODE_TEXT}    71110
 
 *** Keywords ***
 ซื้อ Scrabble
+    [Arguments]    ${FULLNAME_TEXT}    ${ADDRESS1_TEXT}    ${ADDRESS2_TEXT}    ${PROVINCE_TEXT}    ${POSTCODE_TEXT}
     เปิดโครมไปที่หน้าเว็บ
     เลือกอายุ
     เลือกเพศ
@@ -10,7 +16,7 @@ ${URL}    shopping
     เลือกสินค้า
     เช็ครายละเอียดสินค้าและเลือก shipping method
     ตรวจสอบสินค้าหน้า Shopping Cart
-    กรอกที่อยู่
+    กรอกที่อยู่    ${FULLNAME_TEXT}    ${ADDRESS1_TEXT}    ${ADDRESS2_TEXT}    ${PROVINCE_TEXT}    ${POSTCODE_TEXT}
     เช็คข้อมูลการสั่งซื้อสินค้าที่ Page Payment
     เลือกช่องทางการชำระเงิน
     เช็ครายละเอียดสินค้าครั้งสุดท้าย
@@ -48,12 +54,13 @@ ${URL}    shopping
     Wait Until Element Contains    id:shipping_total   ฿35.00
     Click Element                  id:btn_checkout
 กรอกที่อยู่
+    [Arguments]    ${FULLNAME_TEXT}    ${ADDRESS1_TEXT}    ${ADDRESS2_TEXT}    ${PROVINCE_TEXT}    ${POSTCODE_TEXT}
     Wait Until Page Contains                Shipping Address
-    Input Text       id:fullname            Numlabyod Reprakan
-    Input Text       id:address_1           124 m.1 Phang Tru, Tha muang
-    Input Text       id:address_2           9 m.1 Phang Tru, Tha muang
-    Input Text       id:province            Kanchanaburi
-    Input Text       id:postcode            71110
+    Input Text       id:fullname            ${FULLNAME_TEXT}
+    Input Text       id:address_1           ${ADDRESS1_TEXT}
+    Input Text       id:address_2           ${ADDRESS2_TEXT}
+    Input Text       id:province            ${PROVINCE_TEXT} 
+    Input Text       id:postcode            ${POSTCODE_TEXT}
     Click Element    id:btn_addr_deliver
 เช็คข้อมูลการสั่งซื้อสินค้าที่ Page Payment
     Wait Until Page Contains    Payment Methods
