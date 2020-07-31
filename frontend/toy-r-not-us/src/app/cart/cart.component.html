@@ -39,15 +39,17 @@
           <th>{{product.Price*31.5}}</th>
           <th>{{product.Availability}}</th>
           <th><button type="button" (click)="minus()">-</button>
-               {{product.Quantity}}<button type="button"(click)="plus()">+</button></th>
-            
+               {{product.Quantity}}
+               <button type="button"(click)="plus()">+</button>
+          </th>
+          <!--REMOVE PRODUCT IN LIST-->
           <th> <a (click)="remove(product)" routerLink="./">Remove</a></th>
-
         </tr>
       </tbody>
     </table>  
   </div>
   <div>
+
     <a> <h3>Shipping Mathod : </h3></a>
     <div class="Shipping">
       <div class="custom-control custom-radio">
@@ -67,7 +69,7 @@
   </div>
 
     <div class="col-md-3 ml-md-auto">
-    <h3>Subtotal (__ item) : {{product.Price*31.5}}</h3>
+    <h3>Subtotal ({{product.Quantity}} item) : {{product.Price*31.5}}</h3>
     <br/>
     <h4><a>Shipping fee : {{shipping_fee}} </a></h4>
   <br/>
