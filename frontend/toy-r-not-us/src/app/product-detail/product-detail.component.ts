@@ -10,6 +10,7 @@ import { from } from 'rxjs';
 })
 export class ProductDetailComponent implements OnInit {
   product: Product;
+  products: Product[] = [];
 
   constructor(public service: ProductService) {
     this.product=service.product;
@@ -20,6 +21,7 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit(): void {
   }
 
+<<<<<<< HEAD
   //quantity add-drop 
   quantity: number =1;
   i=1
@@ -35,6 +37,13 @@ export class ProductDetailComponent implements OnInit {
       this.quantity=this.i;
     }
   }
+=======
+  collectData(product:Product): void {
+    this.service.saveData(product);
+    this.products.push(product);
+  }
+
+>>>>>>> 3bc9509fcf8c4ac7d841563941f168497c8db05d
 }
 
   

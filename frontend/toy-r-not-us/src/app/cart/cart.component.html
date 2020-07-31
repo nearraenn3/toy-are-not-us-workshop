@@ -19,28 +19,53 @@
     <table class="table" style="width: 100%;" >
       <thead>
       <tr>
-        <th>Toy picture</th>
-        <th>Toy name</th>
+        <th>Picture</th>
+        <th>Name</th>
         <th>Gender</th>
         <th>Brand</th>
         <th>Price(THB)</th>
-        <th>Availabillity</th>
+        <th>Availability</th>
+        <th>Quantity</th>
       </tr>
       </thead>
-      <tbody>
-        <tr>
-            <th>
-                <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
-            </th>
-            <th>{{product.Toy_name}}</th>
-            <th>{{product.Gender}}</th>
-            <th>{{product.Brand}}</th>
-            <th>{{product.Price*31.5}}</th>
-            <th>{{product.Availability}}</th>
+      <tbody *ngIf="products.length > 0">
+        <tr *ngFor="let product of products">
+          <th>
+            <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
+          </th>
+          <th>{{product.Toy_name | uppercase}}</th>
+          <th>{{product.Gender}}</th>
+          <th>{{product.Brand}}</th>
+          <th>{{product.Price*31.5}}</th>
+          <th>{{product.Availability}}</th>
+          <th>1</th>
         </tr>
-    </tbody>
+      </tbody>
     </table>  
   </div>
+  <div>
+    <a> Shipping Mathod : </a>
+    <div class="Shipping">
+      <div class="custom-control custom-radio">
+        <input id="kerry" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+        <label class="custom-control-label" for="kerry">Kerry</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input id="lineman" name="paymentMethod" type="radio" class="custom-control-input" required>
+        <label class="custom-control-label" for="lineman">Line Man</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input id="EMS" name="paymentMethod" type="radio" class="custom-control-input" required>
+        <label class="custom-control-label" for="EMS">EMS</label>
+      </div>
+    </div>
+    <a> Shipping Fee :</a>
+  </div>
+ 
+    <a>Subtotal (__ item) : {{product.Price*31.5}}</a> 
+    <br><a>Shipping fee :</a>
+  
+  <br/>
   <br/>
   <button id="btn_checkout" href="./address" [routerLink]="['/address']" type="button" class="btn btn-info">Process to checkout</button>
   
