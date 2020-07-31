@@ -40,7 +40,6 @@
           <th>{{product.Availability}}</th>
           <th><button type="button" (click)="minus()">-</button>
                {{product.Quantity}}<button type="button"(click)="plus()">+</button></th>
-
             
           <th> <a (click)="remove(product)" routerLink="./">Remove</a></th>
 
@@ -53,24 +52,24 @@
     <div class="Shipping">
       <div class="custom-control custom-radio">
         <input id="kerry" name="paymentMethod" (click)="priceKerry()" type="radio" class="custom-control-input" required>
-        <label class="custom-control-label" for="kerry">Kerry</label>
+        <label class="custom-control-label" for="kerry"><h5>Kerry</h5></label>
       </div>
       <div class="custom-control custom-radio">
         <input id="lineman" name="paymentMethod" (click)="priceLineman()" type="radio" class="custom-control-input" >
-        <label class="custom-control-label" for="lineman">Line Man</label>
+        <label class="custom-control-label" for="lineman"><h5>Line Man</h5></label>
       </div>
       <div class="custom-control custom-radio">
         <input id="EMS" name="paymentMethod" (click)="priceEms()" type="radio" class="custom-control-input" >
-        <label class="custom-control-label" for="EMS">EMS</label>
+        <label class="custom-control-label" for="EMS"><h5>EMS</h5></label>
       </div>
     </div>
-    <a> Shipping Fee : {{shipping_fee}}</a>
+    <a> <h5>Shipping Fee : {{shipping_fee}} </h5></a>
   </div>
 
     <div class="col-md-3 ml-md-auto">
-    <h2>Subtotal (__ item) : {{product.Price*31.5}}</h2>
+    <h3>Subtotal (__ item) : {{product.Price*31.5}}</h3>
     <br/>
-    <a>Shipping fee : {{shipping_fee}} </a>
+    <h4><a>Shipping fee : {{shipping_fee}} </a></h4>
   <br/>
   <br/>
   <button id="btn_checkout" href="./address" [routerLink]="['/address']" type="button" class="btn btn-info">Process to checkout</button>
