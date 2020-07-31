@@ -41,7 +41,7 @@
   
           <div class="mb-3">
             <label for="address">Address</label>
-            <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+            <input type="text" class="form-control" id="address" placeholder="7 Moo 1 T.Klongprasong " required>
             <div class="invalid-feedback">
               Please enter your shipping address.
             </div>
@@ -77,7 +77,7 @@
           </div>
           <hr class="mb-4">
           <!--<button class="btn btn-primary btn-lg btn-block" type="submit" required>Continue to checkout</button>-->
-          <input class="btn btn-primary btn-lg btn-block" type="submit" value="Continue to checkout">
+          <input class="btn btn-primary btn-lg btn-block" type="submit" value="Continue to checkout" [routerLink]="['/payment']">
         </form>
       </div>
     </div>

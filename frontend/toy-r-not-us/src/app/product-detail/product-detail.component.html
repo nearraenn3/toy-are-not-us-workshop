@@ -53,7 +53,16 @@
     <p>Price: {{product.Price*31.5}} (THB) </p>
     <p>Shipping Method: Cash on delivery</p>
     <p id="toy_stock">Stock: {{product.Availability}} </p>
+<<<<<<< HEAD
+    <P>Quantity:
+      <button type="button" (click)="minus()">-</button>
+      <input type="text" [value]="quantity">
+      <button type="button"(click)="plus()"><i >+</i></button></P>
+    <br/>
+      <button id="btn_cart" href="./cart" [routerLink]="['/cart']" type="button" class="btn btn-info">Add to cart</button>
+=======
     <P>Quantity: 1</P>
     <button id="btn_cart" [routerLink]="['/cart']" ng-click="$location.path('#/product-detail')" type="button" class="btn btn-info" (click)="collectData(product)">Add to cart</button>
+>>>>>>> 3bc9509fcf8c4ac7d841563941f168497c8db05d
     <br/>
 </div>
