@@ -38,7 +38,9 @@
           <th>{{product.Brand}}</th>
           <th>{{product.Price*31.5}}</th>
           <th>{{product.Availability}}</th>
-          <th>1</th>
+          <th>{{product.Quantity}}</th>
+          <th> <a (click)="remove(product)" routerLink="./">Remove</a></th>
+
         </tr>
       </tbody>
     </table>  

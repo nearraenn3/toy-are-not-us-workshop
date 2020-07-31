@@ -6,5 +6,6 @@ export class Product {
         public Price : number,
         public Availability : string ,
         public Brand : string) {}
+        public Quantity : string
 
 }
