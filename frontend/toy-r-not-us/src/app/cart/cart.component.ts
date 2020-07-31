@@ -41,13 +41,13 @@ i=1
 plus(){
   if(this.i !=5){
     this.i++;
-    this.quantity=this.i;
+    this.product.Quantity=this.i;
   }
 }
 minus(){
   if(this.i !=1){
     this.i--;
-    this.quantity=this.i;
+    this.product.Quantity=this.i;
   }
 
 }
