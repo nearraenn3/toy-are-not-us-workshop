@@ -7,6 +7,7 @@ import { MainComponent } from './main/main.component';
 import { CartComponent } from './cart/cart.component';
 import { AddressComponent} from './address/address.component'; 
 import { from } from 'rxjs';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 //Create component routes path
 const routes: Routes = [
@@ -17,6 +18,7 @@ const routes: Routes = [
   // { path: 'product-detail', component: ProductDetailComponent},
   { path: 'cart', component: CartComponent},
   { path: 'address', component: AddressComponent},
+  { path: 'thankyou', component: ThankyouComponent}
 ];
     
 @NgModule({
