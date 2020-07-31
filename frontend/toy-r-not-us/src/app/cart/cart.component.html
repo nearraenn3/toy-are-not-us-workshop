@@ -19,22 +19,28 @@
     <table class="table" style="width: 100%;" >
       <thead>
       <tr>
-        <th>Toy picture</th>
-        <th>Toy name</th>
+        <th>Picture</th>
+        <th>Name</th>
         <th>Gender</th>
         <th>Brand</th>
         <th>Price(THB)</th>
-        <th>Availabillity</th>
+        <th>Availability</th>
+        <th>Quantity</th>
       </tr>
       </thead>
       <tbody *ngIf="products.length > 0">
         <tr *ngFor="let product of products">
-            <th id="toy_{{product.Toy_name | lowercase}}" [routerLink]="['/detail/'+ product.Toy_name]" (click)="clickDetail(product)">{{product.Toy_name}}</th>
-            <th>{{product.Brand}}</th>
-            <th>{{product.Price}}</th>
-            <th>{{product.Availability}}</th>
+          <th>
+            <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
+          </th>
+          <th>{{product.Toy_name | uppercase}}</th>
+          <th>{{product.Gender}}</th>
+          <th>{{product.Brand}}</th>
+          <th>{{product.Price*31.5}}</th>
+          <th>{{product.Availability}}</th>
+          <th>1</th>
         </tr>
-    </tbody>
+      </tbody>
     </table>  
   </div>
   <br/>
