@@ -46,7 +46,7 @@
     </table>  
   </div>
   <div>
-    <a> Shipping Mathod : </a>
+    <a> <h3>Shipping Mathod : </h3></a>
     <div class="Shipping">
       <div class="custom-control custom-radio">
         <input id="kerry" name="paymentMethod" type="radio" class="custom-control-input" checked required>
@@ -63,11 +63,12 @@
     </div>
     <a> Shipping Fee :</a>
   </div>
- 
-    <a>Subtotal (__ item) : {{product.Price*31.5}}</a> 
-    <br><a>Shipping fee :</a>
-  
+    <div class="col-md-3 ml-md-auto">
+    <h2>Subtotal (__ item) : {{product.Price*31.5}}</h2>
+    <br/>
+    <a>Shipping fee :</a>
+   
   <br/>
   <br/>
   <button id="btn_checkout" href="./address" [routerLink]="['/address']" type="button" class="btn btn-info">Process to checkout</button>
-  
+ </div>
