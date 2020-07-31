@@ -5,7 +5,21 @@
       vertical-align: 50px;
       animation: mymove 5s infinite;
     }
-
+    .button {
+      background-color: #4caf50; /* Green */
+      border: none;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 50px 600px;
+      cursor: pointer;
+    }
+    .button_back {
+      border-radius: 12px;
+    }
     @keyframes mymove {
       50% {
         vertical-align: 100px;
@@ -13,12 +27,13 @@
     }
   </style>
   <h1 style="text-align: center; font-family: Trebuchet MS;">
-    <img id="myIMG" src="thank-you2.png" width="50" height="50" />
+    <img id="myIMG" />
     your order number is xxx <br />
   </h1>
+  <p id="date"></p>
 
   <p style="text-align: center; font-family: Trebuchet MS;">
-    <strong> Product summary </strong><br />
+    <strong> summary </strong><br />
     product name : xxx <br />
     gender : xxx <br />
     age : xxx <br />
@@ -27,4 +42,8 @@
   <h2 style="text-align: center; font-family: Trebuchet MS;">
     thank you for purchasing <br />
   </h2>
+
+  <button class="button button_back" [routerLink]="['/toy-product']">
+    back to menu
+  </button>
 </html>

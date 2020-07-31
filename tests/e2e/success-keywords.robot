@@ -1,5 +1,5 @@
 *** Variables ***
-${URL}    shopping
+${URL}    localhost:4200
 ${FULLNAME_TEXT}    Numlabyod Reprakan
 ${ADDRESS1_TEXT}    124 m.1 Phang Tru, Tha muang
 ${ADDRESS2_TEXT}    9 m.1 Phang Tru, Tha muang
@@ -9,7 +9,7 @@ ${POSTCODE_TEXT}    71110
 *** Keywords ***
 ซื้อ Scrabble
     [Arguments]    ${FULLNAME_TEXT}    ${ADDRESS1_TEXT}    ${ADDRESS2_TEXT}    ${PROVINCE_TEXT}    ${POSTCODE_TEXT}
-    เปิดโครมไปที่หน้าเว็บ
+    กด enter to website
     เลือกอายุ
     เลือกเพศ
     กดค้นหา
@@ -23,6 +23,8 @@ ${POSTCODE_TEXT}    71110
     ปิดหน้าเว็บ
 เปิดโครมเข้าไปที่หน้าเว็บ
     Open Browser    ${URL}    chrome
+กด enter to website
+    Click Element    id:enter_to_website
 เลือกอายุ
     Click Element               id:age
     Wait Until Page Contains    over8
@@ -34,11 +36,13 @@ ${POSTCODE_TEXT}    71110
 กดค้นหา
     Click Element    id:btn_search
 เลือกสินค้า
-    Sleep    3 seconds
+    Sleep    2 seconds
     Mouse Down       id:toy_scrabble
     Click Element    id:toy_scrabble
 เช็ครายละเอียดสินค้าและเลือก shipping method
     Wait Until Page Contains                          Scrabble
+    Sleep    2 seconds
+    Mouse Down    id:btn_cart
     Wait Until Element Contains    id:toy_brand       GeekToys
     Wait Until Element Contains    id:toy_price       $19.95
     Wait Until Element Contains    id:toy_stock       In Stock
