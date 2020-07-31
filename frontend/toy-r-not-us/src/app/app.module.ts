@@ -8,6 +8,7 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
 import { MainComponent } from './main/main.component';
 import { CartComponent } from './cart/cart.component';
 import { AddressComponent } from './address/address.component';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddressComponent } from './address/address.component';
     ProductDetailComponent,
     MainComponent,
     CartComponent,
-    AddressComponent
+    AddressComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,
