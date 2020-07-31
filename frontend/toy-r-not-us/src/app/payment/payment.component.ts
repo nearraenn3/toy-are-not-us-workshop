@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Product } from '../models/product'
+import { ProductService } from '../service/product.service'
 
 @Component({
   selector: 'app-payment',
@@ -6,10 +8,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent implements OnInit {
-
-  constructor() { }
-
+  product: Product;
+  products : Product[] = []; 
+  constructor(public service: ProductService) {
+    this.product=service.product;
+   }
   ngOnInit(): void {
+    this.products=this.service.products;
   }
 
 }
