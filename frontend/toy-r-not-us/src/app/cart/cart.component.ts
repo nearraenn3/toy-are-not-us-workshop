@@ -12,6 +12,7 @@ export class CartComponent implements OnInit {
   products : Product[] = []; 
   shipping_fee = 0;
 
+
   constructor(public service: ProductService) {
     this.product=service.product;
    }
@@ -23,13 +24,18 @@ export class CartComponent implements OnInit {
 
   priceKerry() : void {
     this.shipping_fee = 35;
+    this.service.shipping_fee=this.shipping_fee;
   }
   priceLineman() : void {
     this.shipping_fee = 20;
+    this.service.shipping_fee=this.shipping_fee;
   }
   priceEms() : void {
     this.shipping_fee = 30;
+    this.service.shipping_fee=this.shipping_fee;
   }
+
+
 
 
   //remove product on cart page

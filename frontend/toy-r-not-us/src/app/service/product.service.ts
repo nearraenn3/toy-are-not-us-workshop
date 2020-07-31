@@ -8,13 +8,19 @@ export class ProductService {
 
   public product: Product;
   products: Product[] = [];
+  quantity=0;
+  shipping_fee:number;
 
-  constructor() { }
+  constructor() { 
+    
+  }
 
   selectProduct(product:Product){
     this.product=product;
   }
-  saveData(product:Product){
-    this.products.push(product);
+  saveData(product:Product,quantity:number){
+    this.product.Quantity=quantity;
+    this.products.push(this.product);
   }
+
 }

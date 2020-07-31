@@ -28,22 +28,22 @@
   </style>
   <h1 style="text-align: center; font-family: Trebuchet MS;">
     <img id="myIMG" />
-    your order number is xxx <br />
+    your order number is 20200731001 <br />
   </h1>
   <p id="date"></p>
 
   <p style="text-align: center; font-family: Trebuchet MS;">
     <strong> summary </strong><br />
-    product name : xxx <br />
-    gender : xxx <br />
-    age : xxx <br />
+    product name : {{product.Toy_name}} <br />
+    gender : {{product.Gender}} <br />
+    age : {{product.Age}} <br />
   </p>
 
   <h2 style="text-align: center; font-family: Trebuchet MS;">
     thank you for purchasing <br />
   </h2>
 
-  <button class="button button_back" [routerLink]="['/toy-product']">
-    back to menu
+  <button id="back_to_product" class="button button_back" [routerLink]="['/toy-product']">
+    back to product
   </button>
 </html>
