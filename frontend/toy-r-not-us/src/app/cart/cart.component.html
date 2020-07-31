@@ -27,15 +27,11 @@
         <th>Availabillity</th>
       </tr>
       </thead>
-      <tbody>
-        <tr>
-            <th>
-                <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
-            </th>
-            <th>{{product.Toy_name}}</th>
-            <th>{{product.Gender}}</th>
+      <tbody *ngIf="products.length > 0">
+        <tr *ngFor="let product of products">
+            <th id="toy_{{product.Toy_name | lowercase}}" [routerLink]="['/detail/'+ product.Toy_name]" (click)="clickDetail(product)">{{product.Toy_name}}</th>
             <th>{{product.Brand}}</th>
-            <th>{{product.Price*31.5}}</th>
+            <th>{{product.Price}}</th>
             <th>{{product.Availability}}</th>
         </tr>
     </tbody>
