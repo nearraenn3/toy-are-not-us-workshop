@@ -9,12 +9,16 @@ import { ProductService } from '../service/product.service'
 })
 export class CartComponent implements OnInit {
   product: Product;
+  products : Product[] = []; 
 
   constructor(public service: ProductService) {
     this.product=service.product;
    }
-
+  
+  
   ngOnInit(): void {
+    this.products=this.service.products;
   }
+
 
 }

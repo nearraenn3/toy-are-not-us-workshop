@@ -7,10 +7,14 @@ import { Product } from '../models/product'
 export class ProductService {
 
   public product: Product;
+  products: Product[] = [];
 
   constructor() { }
 
   selectProduct(product:Product){
     this.product=product;
+  }
+  saveData(product:Product){
+    this.products.push(product);
   }
 }

@@ -9,12 +9,18 @@ import { Product } from '../models/product'
 })
 export class ProductDetailComponent implements OnInit {
   product: Product;
+  products: Product[] = [];
 
   constructor(public service: ProductService) {
     this.product=service.product;
    }
 
   ngOnInit(): void {
+  }
+
+  collectData(product:Product): void {
+    this.service.saveData(product);
+    this.products.push(product);
   }
 
 }
