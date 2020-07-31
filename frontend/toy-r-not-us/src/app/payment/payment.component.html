@@ -1,1 +1,75 @@
-<p>payment works!</p>
+
+ <!--START NAVBAR-->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <h3><a class="navbar-brand" href="./main">❤TOYs&nbsp;</a></h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./toy-product">Products</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!--END NAVBAR-->
+
+<div>
+    <h3>Paymant Method</h3>
+    <table class="table" style="width: 100%;" >
+      <thead>
+      <tr>
+        <th>Picture</th>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>Brand</th>
+        <th>Price(THB)</th>
+        <th>Availability</th>
+        <th>Quantity</th>
+      </tr>
+      </thead>
+      <tbody *ngIf="products.length > 0">
+        <tr *ngFor="let product of products">
+          <th>
+            <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
+          </th>
+          <th>{{product.Toy_name | uppercase}}</th>
+          <th>{{product.Gender}}</th>
+          <th>{{product.Brand}}</th>
+          <th>{{product.Price*31.5}}</th>
+          <th>{{product.Availability}}</th>
+          <th>1</th>
+        </tr>
+      </tbody>
+    </table>  
+  </div>
+  <div>
+    <a> Shipping Mathod : </a>
+    <h2> Select Payment Mathod : </h2>
+    <div class="Visa">
+      <div class="custom-control custom-radio">
+        <input id="Visa" name="paymentMethod" type="radio" class="custom-control-input" checked required>
+        <label class="custom-control-label" for="Visa">Visa</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input id="Master" name="paymentMethod" type="radio" class="custom-control-input" required>
+        <label class="custom-control-label" for="Master">Master</label>
+      </div>
+      <div class="custom-control custom-radio">
+        <input id="linepay" name="paymentMethod" type="radio" class="custom-control-input" required>
+        <label class="custom-control-label" for="linepay">Line-pay</label>
+      </div>
+      
+    </div>
+    <div>
+        <a>Order Summary</a>
+        <a>Item (__):: {{product.Price*31.5}} THB</a>
+        <br><a>Shipping Fee : ___ THB </a>
+        <br><a> Order total : ____ THB </a>
+    </div>
+  
+  <br/>
+  <br/>
+  <button id="btn_checkout" [routerLink]="['/thankyou']" type="button" class="btn btn-info">Place your order</button>

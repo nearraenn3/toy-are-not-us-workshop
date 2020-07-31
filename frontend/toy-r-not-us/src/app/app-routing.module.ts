@@ -7,8 +7,8 @@ import { MainComponent } from './main/main.component';
 import { CartComponent } from './cart/cart.component';
 import { AddressComponent} from './address/address.component'; 
 import { from } from 'rxjs';
-import { PaymentComponent } from './payment/payment.component';
 import { ThankyouComponent } from './thankyou/thankyou.component';
+import { PaymentComponent } from './payment/payment.component';
 
 //Create component routes path
 const routes: Routes = [
@@ -19,8 +19,8 @@ const routes: Routes = [
   // { path: 'product-detail', component: ProductDetailComponent},
   { path: 'cart', component: CartComponent},
   { path: 'address', component: AddressComponent},
-  { path: 'payment' , component: PaymentComponent},
-  { path: 'thankyou', component:ThankyouComponent},
+  { path: 'thankyou', component: ThankyouComponent},
+  { path: 'payment' , component: PaymentComponent}
 ];
     
 @NgModule({

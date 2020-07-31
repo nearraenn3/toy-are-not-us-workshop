@@ -35,6 +35,7 @@ export class ProductDetailComponent implements OnInit {
       this.i--;
       this.quantity=this.i;
     }
+
   }
   collectData(product:Product): void {
     this.service.saveData(product);

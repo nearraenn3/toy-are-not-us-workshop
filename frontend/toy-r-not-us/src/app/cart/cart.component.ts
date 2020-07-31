@@ -10,6 +10,7 @@ import { ProductService } from '../service/product.service'
 export class CartComponent implements OnInit {
   product: Product;
   products : Product[] = []; 
+  shipping_fee = 0;
 
   constructor(public service: ProductService) {
     this.product=service.product;
@@ -19,6 +20,34 @@ export class CartComponent implements OnInit {
   ngOnInit(): void {
     this.products=this.service.products;
   }
+
+  priceKerry() : void {
+    this.shipping_fee = 35;
+  }
+  priceLineman() : void {
+    this.shipping_fee = 20;
+  }
+  priceEms() : void {
+    this.shipping_fee = 30;
+  }
+  
+//quantity add-drop 
+quantity: number =1;
+i=1
+plus(){
+  if(this.i !=5){
+    this.i++;
+    this.quantity=this.i;
+  }
+}
+minus(){
+  if(this.i !=1){
+    this.i--;
+    this.quantity=this.i;
+  }
+
+}
+
   //remove product on cart page
   remove(products) {
       const index: number = this.products.indexOf(products);
