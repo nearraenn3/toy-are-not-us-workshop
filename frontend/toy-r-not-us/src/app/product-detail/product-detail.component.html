@@ -59,5 +59,6 @@
       <button type="button"(click)="plus()"><i >+</i></button></P>
     <br/>
       <button id="btn_cart" href="./cart" [routerLink]="['/cart']" type="button" class="btn btn-info" (click)="collectData(product)">Add to cart</button>
+    <button id="btn_cart" [routerLink]="['/cart']" ng-click="$location.path('#/product-detail')" type="button" class="btn btn-info" (click)="collectData(product)">Add to cart</button>
     <br/>
 </div>

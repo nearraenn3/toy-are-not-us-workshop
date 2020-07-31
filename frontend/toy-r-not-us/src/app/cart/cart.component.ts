@@ -10,7 +10,7 @@ import { ProductService } from '../service/product.service'
 export class CartComponent implements OnInit {
   product: Product;
   products : Product[] = []; 
-  shipping_fee =0;
+  shipping_fee = 0;
 
   constructor(public service: ProductService) {
     this.product=service.product;
@@ -32,4 +32,11 @@ export class CartComponent implements OnInit {
   }
 
 
+  //remove product on cart page
+  remove(products) {
+      const index: number = this.products.indexOf(products);
+      if (index !== -1) {
+          this.products.splice(index, 1);      
+  }
+}
 }
