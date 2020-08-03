@@ -1,5 +1,5 @@
 *** Variables ***
-${URL}    localhost:4200
+${URL}    https://nyaqxii.github.io/toy/.
 ${FULLNAME_TEXT}    Numlabyod Reprakan
 ${ADDRESS1_TEXT}    124 m.1 Phang Tru, Tha muang
 ${ADDRESS2_TEXT}    9 m.1 Phang Tru, Tha muang
