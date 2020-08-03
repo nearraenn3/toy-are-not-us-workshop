@@ -37,11 +37,13 @@ export class ProductDetailComponent implements OnInit {
     }
 
   }
+
   collectData(product:Product): void {
-    this.service.saveData(product);
+    this.service.saveData(product,this.quantity);
     this.products.push(product);
   }
+  
 
 }
-
+    
   

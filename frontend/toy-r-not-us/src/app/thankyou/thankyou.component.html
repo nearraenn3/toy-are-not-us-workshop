@@ -33,19 +33,19 @@
 
   <p style="text-align: center; font-family: Trebuchet MS;">
     <strong> summary </strong><br />
-    product name : scrabble <br />
-    gender : GeekToys <br />GeekToys	$ 19.95	In Stock
-    age : Neutral <br />
-    Price: 628.425 (THB)
-    Shipping Method: KERRY
-    Stock: In Stock
+    product name : {{product.Toy_name}} <br />
+    gender : {{product.Gender}} <br />
+    age : {{product.Age}} <br />
+    Price: 628.425 (THB) <br />
+    Shipping Method: KERRY <br />
+    Stock: In Stock<br />
   </p>
 
   <h2 style="text-align: center; font-family: Trebuchet MS;">
     thank you for purchasing <br />
   </h2>
 
-  <button class="button button_back" [routerLink]="['/toy-product']">
-    back to menu
+  <button id="back_to_product" class="button button_back" [routerLink]="['/toy-product']">
+    back to product
   </button>
 </html>

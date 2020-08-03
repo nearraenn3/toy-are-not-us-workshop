@@ -9,7 +9,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-          <a class="nav-link" href="./toy-product">Products</a>
+          <a class="nav-link" [routerLink]="['/toy-product']">Products</a>
         </li>
       </ul>
     </div>
@@ -50,7 +50,7 @@
     <h4><b>{{product.Toy_name}}</b></h4>
     <p id="toy_brand">Brand: {{product.Brand}}</p>
     <p>Gender: {{product.Gender}}</p>
-    <p>Price: {{product.Price*31.5}} (THB) </p>
+    <p id="toy_price">Price: {{product.Price*31.5}} (THB) </p>
     <p>Shipping Method: Cash on delivery</p>
     <p id="toy_stock">Stock: {{product.Availability}} </p>
     <P>Quantity:

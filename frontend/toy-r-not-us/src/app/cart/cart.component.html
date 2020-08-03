@@ -33,10 +33,10 @@
           <th>
             <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
           </th>
-          <th>{{product.Toy_name | uppercase}}</th>
+          <th>{{product.Toy_name}}</th>
           <th>{{product.Gender}}</th>
           <th>{{product.Brand}}</th>
-          <th>{{product.Price*31.5}}</th>
+          <th>{{product.Price*31.5*product.Quantity | number: "1.2"}}</th>
           <th>{{product.Availability}}</th>
           <th><button type="button" (click)="minus()">-</button>
                {{product.Quantity}}
@@ -65,11 +65,17 @@
         <label class="custom-control-label" for="EMS"><h5>EMS</h5></label>
       </div>
     </div>
-    <a> <h5>Shipping Fee : {{shipping_fee}} </h5></a>
+    <!--<a id="shipping_fee"> Shipping Fee : {{shipping_fee}}</a>
+  </div>
+ 
+    <a>Subtotal ({{product.Quantity}} item) : {{product.Price*31.5*product.Quantity | number: "1.2"}}</a> 
+    <br><a>Shipping fee : {{shipping_fee}}</a>
+-->
+    <a><h5>Shipping Fee : {{shipping_fee}} </h5></a>
   </div>
 
     <div class="col-md-3 ml-md-auto">
-    <h3>Subtotal ({{product.Quantity}} item) : {{product.Price*31.5}}</h3>
+    <h3>Subtotal ({{product.Quantity}} item) : {{product.Price*31.5*product.Quantity | number: "1.2"}}</h3>
     <br/>
     <h4><a>Shipping fee : {{shipping_fee}} </a></h4>
   <br/>

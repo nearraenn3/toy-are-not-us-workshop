@@ -17,7 +17,7 @@
   <!--END NAVBAR-->
 
 <div>
-    <h3>Paymant Method</h3>
+    <h3>Payment Method</h3>
     <table class="table" style="width: 100%;" >
       <thead>
       <tr>
@@ -35,19 +35,19 @@
           <th>
             <img style="width: 200px;" src="https://cmsassets.rationalcdn.com/blog/2019/03/second-steps-scrabble.png?fit=inside|800:700" alt={{product.Toy_name}} />
           </th>
-          <th>{{product.Toy_name | uppercase}}</th>
+          <th>{{product.Toy_name}}</th>
           <th>{{product.Gender}}</th>
           <th>{{product.Brand}}</th>
-          <th>{{product.Price*31.5}}</th>
+          <th>{{product.Price*31.5*product.Quantity | number: "1.2"}}</th>
           <th>{{product.Availability}}</th>
-          <th>1</th>
+          <th>{{product.Quantity}}</th>
         </tr>
       </tbody>
     </table>  
   </div>
   <div>
-    <a> Shipping Mathod : </a>
-    <h2> Select Payment Mathod : </h2>
+    <a> Shipping Method : </a>
+    <h2> Select Payment Method : </h2>
     <div class="Visa">
       <div class="custom-control custom-radio">
         <input id="Visa" name="paymentMethod" type="radio" class="custom-control-input" checked required>
@@ -65,9 +65,10 @@
     </div>
     <div>
         <a>Order Summary</a>
-        <a>Item (__):: {{product.Price*31.5}} THB</a>
-        <br><a>Shipping Fee : ___ THB </a>
-        <br><a> Order total : ____ THB </a>
+        <br/>
+        <a>Item ({{product.Quantity}}):: {{product.Price*31.5*product.Quantity | number: "1.2"}} THB</a>
+        <br><a>Shipping Fee :  {{shipping_fee}} THB </a>
+        <br><a> Order total : {{ product.Price*31.5*product.Quantity+shipping_fee | number : "1.2"}} THB </a>
     </div>
   
   <br/>
