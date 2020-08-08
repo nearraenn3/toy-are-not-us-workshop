@@ -39,16 +39,18 @@
           <th>{{product.Price*31.5*product.Quantity | number: "1.2"}}</th>
           <th>{{product.Availability}}</th>
           <th><button type="button" (click)="minus()">-</button>
-               {{product.Quantity}}<button type="button"(click)="plus()">+</button></th>
-            
+               {{product.Quantity}}
+               <button type="button"(click)="plus()">+</button>
+          </th>
+          <!--REMOVE PRODUCT IN LIST-->
           <th> <a (click)="remove(product)" routerLink="./">Remove</a></th>
-
         </tr>
       </tbody>
     </table>  
   </div>
   <div>
-    <a> <h3>Shipping Method : </h3></a>
+
+    <a> <h3>Shipping Mathod : </h3></a>
     <div class="Shipping">
       <div class="custom-control custom-radio">
         <label>
