@@ -55,7 +55,7 @@ INSERT INTO toy (id, name, gender, age, price, availability, brand) VALUES (
 INSERT INTO toy (id, name, gender, age, price, availability, brand) VALUES (
 16, 'Scrabble','Neutral','over 8', 19.95, 'InStock', 'GeekToys' );
 INSERT INTO toy (id, name, gender, age, price, availability, brand) VALUES (
-13, 'Settlers of Catan Board Game','over 8', 44.95, 'InStock', 'GeekToys' );
+13, 'Settlers of Catan Board Game', 'Neutral','over 8', 44.95, 'InStock', 'GeekToys' );
 INSERT INTO toy (id, name, gender, age, price, availability, brand) VALUES (
 25, 'Sleep Sheep','Neutral','Baby', 39.00, 'InStock', 'BarnyardBlast' );
 INSERT INTO toy (id, name, gender, age, price, availability, brand) VALUES (
