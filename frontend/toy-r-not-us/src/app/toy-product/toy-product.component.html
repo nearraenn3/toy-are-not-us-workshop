@@ -31,6 +31,8 @@
     <thead>
     <tr>
       <th>Toy name</th>
+      <th>Gender</th>
+      <th>Age</th>
       <th>Brand</th>
       <th>Price</th>
       <th>Availabillity</th>
@@ -39,6 +41,8 @@
     <tbody *ngIf="products.length > 0">
       <tr *ngFor="let product of products">
           <th id="toy_{{product.Toy_name | lowercase}}" [routerLink]="['/detail/'+ product.Toy_name]" (click)="clickDetail(product)">{{product.Toy_name}}</th>
+          <th>{{product.Gender}}</th>
+          <th>{{product.Age}}</th>
           <th>{{product.Brand}}</th>
           <th>$ {{product.Price}}</th>
           <th>{{product.Availability}}</th>

@@ -51,16 +51,19 @@
     <a> <h3>Shipping Method : </h3></a>
     <div class="Shipping">
       <div class="custom-control custom-radio">
-        <input id="kerry" name="paymentMethod" (click)="priceKerry()" type="radio" class="custom-control-input" required>
-        <label class="custom-control-label" for="kerry"><h5>Kerry</h5></label>
+        <label>
+          <input id="kerry" name="paymentMethod" (click)="priceKerry()" type="radio" />
+          Kerry</label>
       </div>
       <div class="custom-control custom-radio">
-        <input id="lineman" name="paymentMethod" (click)="priceLineman()" type="radio" class="custom-control-input" >
-        <label class="custom-control-label" for="lineman"><h5>Line Man</h5></label>
+        <label>
+          <input id="lineman" name="paymentMethod" (click)="priceLineman()" type="radio" />
+          Line man</label>
       </div>
       <div class="custom-control custom-radio">
-        <input id="EMS" name="paymentMethod" (click)="priceEms()" type="radio" class="custom-control-input" >
-        <label class="custom-control-label" for="EMS"><h5>EMS</h5></label>
+        <label>
+          <input id="EMS" name="paymentMethod" (click)="priceEms()" type="radio" />
+          EMS</label>
       </div>
     </div>
     <!--<a id="shipping_fee"> Shipping Fee : {{shipping_fee}}</a>

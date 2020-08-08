@@ -50,9 +50,10 @@
     <h4><b>{{product.Toy_name}}</b></h4>
     <p id="toy_brand">Brand: {{product.Brand}}</p>
     <p>Gender: {{product.Gender}}</p>
+    <p>Age: {{product.Age}}</p>
     <p id="toy_price">Price: {{product.Price*31.5}} (THB) </p>
     <p>Shipping Method: Cash on delivery</p>
-    <p id="toy_stock">Stock: {{product.Availability}} </p>
+    <p id="toy_stock">Availability: {{product.Availability}} </p>
     <P>Quantity:
       <button type="button" (click)="minus()">-</button>
       <input type="text" [value]="quantity">
