@@ -3,10 +3,12 @@ package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 
 @RestController
@@ -39,6 +41,20 @@ public class ToysController {
         }
         return toysList;
     }
+
+//    @GetMapping("/api/v1/toys/{id}")
+//    public ToysResponse getUserById(@PathVariable int id) {
+//        Optional<Toy> toy = toyRepository.findById(id);
+//        return new ToysResponse(
+//                toy.get().getId(),
+//                toy.get().getName(),
+//                toy.get().getGender(),
+//                toy.get().getAge(),
+//                toy.get().getPrice(),
+//                toy.get().getAvailability(),
+//                toy.get().getBrand()
+//        );
+//    }
 
 
 }
