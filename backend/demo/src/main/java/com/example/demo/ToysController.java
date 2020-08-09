@@ -42,19 +42,17 @@ public class ToysController {
         return toysList;
     }
 
-//    @GetMapping("/api/v1/toys/{id}")
-//    public ToysResponse getUserById(@PathVariable int id) {
-//        Optional<Toy> toy = toyRepository.findById(id);
-//        return new ToysResponse(
-//                toy.get().getId(),
-//                toy.get().getName(),
-//                toy.get().getGender(),
-//                toy.get().getAge(),
-//                toy.get().getPrice(),
-//                toy.get().getAvailability(),
-//                toy.get().getBrand()
-//        );
-//    }
-
+    @GetMapping("/api/v1/toys/{id}")
+    public ToysResponse getUserById(@PathVariable int id) {
+        Optional<Toy> toy = toyRepository.findById(id);
+        return new ToysResponse(
+                toy.get().getId(),
+                toy.get().getName(),
+                toy.get().getGender(),
+                toy.get().getAge(),
+                toy.get().getPrice(),
+                toy.get().getAvailability(),
+                toy.get().getBrand());
+    }
 
 }
